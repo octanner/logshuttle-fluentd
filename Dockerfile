@@ -10,7 +10,7 @@ RUN apk --no-cache --update add \
     gem install oj && \
     gem install json && \
     gem install zookeeper && \
-    gem install fluentd -v 0.14.19 && \
+    gem install fluentd -v 0.14.9 && \
     # apk del build-base ruby-dev && \
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/*
 
