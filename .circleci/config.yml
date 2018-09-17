@@ -20,8 +20,8 @@ jobs:
                 docker tag logshuttle "docker.io/akkeris/logshuttle-fluentd:${CIRCLE_BRANCH}-${CIRCLE_BUILD_NUM}"
                 docker push "docker.io/akkeris/logshuttle-fluentd:${CIRCLE_BRANCH}-${CIRCLE_BUILD_NUM}"
                 if [ "${CIRCLE_BRANCH}" == "master" ]; then
-                  docker tag logshuttle "docker.io/akkeris/logshuttle-fluentd:release-${CIRCLE_BUILD_NUM}"
-                  docker tag logshuttle "docker.io/akkeris/logshuttle-fluentd:latest"
+                  docker tag logshuttle-fluentd "docker.io/akkeris/logshuttle-fluentd:release-${CIRCLE_BUILD_NUM}"
+                  docker tag logshuttle-fluentd "docker.io/akkeris/logshuttle-fluentd:latest"
                   docker push "docker.io/akkeris/logshuttle-fluentd:latest"
                   docker push "docker.io/akkeris/logshuttle-fluentd:release-${CIRCLE_BUILD_NUM}"
                 fi
